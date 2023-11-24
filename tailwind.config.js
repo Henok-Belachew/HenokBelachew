@@ -9,7 +9,9 @@ export default {
       colors: {
         primary: "#F85D0B",
         inactive: "#585858",
-        primaryContainer: "#4D2E1D"
+        primaryContainer: "#4D2E1D",
+        sideblack: "#222222",
+        bodyblack: "#151515"
       }
 
     },
