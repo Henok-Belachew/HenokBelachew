@@ -8,7 +8,7 @@ function App() {
       
       <SideNav/>
 
-        <div className='bg-bodyblack w-[75%]'>
+        <div className='bg-sideblack w-[75%]'>
             <Outlet/>
         </div>
       
