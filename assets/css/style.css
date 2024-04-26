@@ -856,7 +856,7 @@ main {
 
 .skills-title { margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
+skills-list2 { padding: 20px; }
 
 
 .skills-item:not(:last-child) { margin-bottom: 15px; }
