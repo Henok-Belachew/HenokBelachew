@@ -46,7 +46,7 @@ const contactItems: ContactItem[] = [
 ];
 
 const Sidebar: React.FC= () => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded);
@@ -64,14 +64,16 @@ const Sidebar: React.FC= () => {
         </div>
         <button className="info_more-btn" onClick={toggleExpanded}>
           <span>Show Contacts</span>
-          <IoIosArrowDown className='4-md:hidden' />
+          <IoIosArrowDown className={`4-md:hidden ${isExpanded ? 'rotate-180' : ''}` } />
         </button>
       </div>
 
-      {true && (
+      
         <div className="sidebar-info_more">
+          
 
 <Separator />
+
           
           <ul className="contacts-list">
           {contactItems.map((item, index) => (
@@ -85,15 +87,17 @@ const Sidebar: React.FC= () => {
         ))}
           </ul>
 
+          
           <Separator />
 
           
 
             <SocialMedia />
             
+            
           
         </div>
-      )}
+      
     </aside>
   );
 };
