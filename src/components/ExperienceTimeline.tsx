@@ -9,7 +9,7 @@ function ExperienceTimeline({title, company, employementType, location, location
 
               
               <h4 className="h5 subtext -mt-1">{title}</h4>
-              <p className="h2 timeline-item-title flex items-center gap-2">
+              <p className="timeline-text flex items-center gap-2">
               <HiOutlineBuildingOffice2 /> {company} · {employementType}
               </p>
 

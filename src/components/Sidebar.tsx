@@ -1,9 +1,13 @@
 // Sidebar.tsx
 import React, { useState } from 'react';
 import { IoIosArrowDown, IoIosPhonePortrait } from "react-icons/io";
+
 import { IoMailOpenOutline, IoLocationOutline } from "react-icons/io5";
-import { FaInstagram, FaGithub } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa6";
+
+import SocialMedia from './SocialMedia';
+
+
+
 import { MdOutlineDateRange } from "react-icons/md";
 import myavator from "../assets/images/my-avatar.png";
 import ContactItem from './ContactItem';
@@ -20,24 +24,24 @@ const contactItems: ContactItem[] = [
   {
     icon: <IoMailOpenOutline />,
     title: 'Email',
-    content: 'richard@example.com',
-    link: 'mailto:richard@example.com'
+    content: 'henok12belachew@gmail.com',
+    link: 'mailto:henok12belachew@gmail.com'
   },
   {
     icon: <IoIosPhonePortrait />,
     title: 'Phone',
-    content: '+1 (213) 352-2795',
+    content: '(+251) 968786690',
     link: 'tel:+12133522795'
   },
   {
     icon: <MdOutlineDateRange />,
     title: 'Birthday',
-    content: 'June 23, 1982'
+    content: 'May 20, 2001'
   },
   {
     icon: <IoLocationOutline />,
     title: 'Location',
-    content: 'Sacramento, California, USA'
+    content: 'Addis Ababa, Ethiopia'
   }
 ];
 
@@ -55,8 +59,8 @@ const Sidebar: React.FC= () => {
           <img src={myavator} alt="Richard Hanrick" width="80" />
         </figure>
         <div className="info-content">
-          <h1 className="name" title="Richard Hanrick">Richard Hanrick</h1>
-          <p className="title">Web developer</p>
+          <h1 className="name" title="Henok Belachew">Henok Belachew</h1>
+          <p className="title">Software Engineer & UI/UX Designer</p>
         </div>
         <button className="info_more-btn" onClick={toggleExpanded}>
           <span>Show Contacts</span>
@@ -83,23 +87,11 @@ const Sidebar: React.FC= () => {
 
           <Separator />
 
-          <ul className="social-list">
-            <li className="social-item">
-              <a href="#" className="social-link">
-              <FaInstagram />
-              </a>
-            </li>
-            <li className="social-item">
-              <a href="#" className="social-link">
-              <FaYoutube />
-              </a>
-            </li>
-            <li className="social-item">
-              <a href="#" className="social-link">
-                <FaGithub/>
-              </a>
-            </li>
-          </ul>
+          
+
+            <SocialMedia />
+            
+          
         </div>
       )}
     </aside>
