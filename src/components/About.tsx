@@ -3,9 +3,9 @@ import service2 from "../assets/images/icon-design.svg"
 import service3 from "../assets/images/icon-dev.svg"
 import service4 from "../assets/images/icon-dev.svg"
 
-function About() {
+function About({activeTab}: {activeTab: string}) {
   return (
-    <div className="article-1 about">
+    <div className={`article about ${activeTab === 'About' ? 'active' : ''}`}>
          <header>
           <h2 className="h2 article-title">About me</h2>
         </header>

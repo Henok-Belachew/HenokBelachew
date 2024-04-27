@@ -1,30 +1,40 @@
 
+const navItems = [
+  'About',
+  'Resume',
+  'Portfolio',
+  'Certificates',
+  'Contact'
+];
 
-function Navbar() {
+
+
+
+
+
+
+
+function Navbar({activeTab, setActiveTab}: {activeTab: string, setActiveTab: Function}) {
+
+  function NavbarItem ({label}: {label: string}) {
+    return (
+      <li onClick={() => setActiveTab(label)} className="navbar-item">
+              <button className={`navbar-link ${activeTab === label ? 'active' : ''}`} >{label}</button>
+      </li>
+    )
+  }
+
   return (
     <div className="navbar">
 
         <ul className="navbar-list">
 
-          <li className="navbar-item">
-            <button className="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li className="navbar-item">
-            <button className="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li className="navbar-item">
-            <button className="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li className="navbar-item">
-            <button className="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li className="navbar-item">
-            <button className="navbar-link" data-nav-link>Contact</button>
-          </li>
+          {navItems.map((item, index) => (
+            <NavbarItem
+              key={index}
+              label={item}
+            />
+          ))}
 
         </ul>
 

@@ -166,7 +166,7 @@
   \*-----------------------------------*/
   
   .sidebar,
-  .article-1 {
+  .article {
     background: var(--eerie-black-2);
     border: 1px solid var(--jet);
     border-radius: 20px;
@@ -209,12 +209,12 @@
   
   .icon-box ion-icon { --ionicon-stroke-width: 35px; }
   
-  /* .article-1 { display: none; } */
+  /* .article { display: none; } */
   
-  /* .article.active {
+  .article.active {
     display: block;
     animation: fade 0.5s ease backwards;
-  } */
+  }
   
   @keyframes fade {
     0% { opacity: 0; }
@@ -1290,7 +1290,7 @@
      * #REUSED STYLE
      */
   
-    .sidebar, .article-1 {
+    .sidebar, .article {
       width: 520px;
       margin-inline: auto;
       padding: 30px;
@@ -1557,7 +1557,7 @@
      * REUSED STYLE
      */
   
-    .sidebar, .article-1 { width: 700px; }
+    .sidebar, .article { width: 700px; }
   
     .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
   
@@ -1675,7 +1675,7 @@
      * REUSED STYLE
      */
   
-    .sidebar, .article-1 {
+    .sidebar, .article {
       width: 950px;
       box-shadow: var(--shadow-5);
     }
@@ -1794,9 +1794,9 @@
      * REUSED STYLE
      */
   
-    .sidebar, .article-1 { width: auto; }
+    .sidebar, .article { width: auto; }
   
-    .article-1 { min-height: 100%; }
+    .article { min-height: 100%; }
   
   
   
