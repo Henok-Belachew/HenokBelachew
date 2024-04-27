@@ -1,6 +1,6 @@
 // ContactItem.tsx
-import React from 'react';
-
+import { FaRegCopy } from "react-icons/fa6";
+import { IoCopyOutline } from "react-icons/io5";
 interface ContactItemProps {
   icon: JSX.Element;
   title: string;
@@ -15,7 +15,13 @@ const ContactItem: React.FC<ContactItemProps> = ({ icon, title, content, link })
         {icon}
       </div>
       <div className="contact-info">
-        <p className="contact-title">{title}</p>
+        <div className="flex justify-between">
+            <p className="contact-title">{title}</p>
+
+            {link && <IoCopyOutline className="text-white-1 opacity-50" />}
+            
+        </div>
+        
         {link ? (
           <a href={link} className="contact-link">{content}</a>
         ) : (

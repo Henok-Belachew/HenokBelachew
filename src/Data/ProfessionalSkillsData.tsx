@@ -10,6 +10,7 @@ import tailwindCss from "../assets/images/Skillsets/Tailwind CSS.svg";
 import typescript from "../assets/images/Skillsets/TypeScript.svg";
 import adobePhotoshop from "../assets/images/Skillsets/Adobe Photoshop.svg";
 import adobeillustrator from "../assets/images/Skillsets/Adobe Illustrator.svg"
+import materialui from "../assets/images/Skillsets/Material Ui.svg"
 // Tools
 
 import git from "../assets/images/Tools/Git.svg";
@@ -17,11 +18,9 @@ import linux from "../assets/images/Tools/Linux.svg";
 import vs from "../assets/images/Tools/Visual Studio Code 2019.svg";
 import windows from "../assets/images/Tools/Windows 11.svg";
 import cpanel from "../assets/images/Tools/Cpanel.svg"
-// import git from "../assets/images/Tools/Git.svg";
-// import linux from "../assets/images/Tools/Linux.svg";
-// import vs from "../assets/images/Tools/Visual Studio Code 2019.svg"
-// import windows from "../assets/images/Tools/Windows.svg";
-// import cpanel from "../assets/images/Tools/Cpanel.svg"
+import github from "../assets/images/Tools/Github.svg"
+
+
 
 export const skillsetImages = {
     all: [
@@ -29,6 +28,7 @@ export const skillsetImages = {
       expressJs,
       javascript,
       mongodb,
+      materialui,
       adobeillustrator,
       mysqlLogo,
       nodejs,
@@ -50,6 +50,7 @@ export const skillsetImages = {
       mongodb,
       mysqlLogo,
       nodejs,
+      materialui,
       reactLogo,
       tailwindCss,
       typescript
@@ -58,7 +59,7 @@ export const skillsetImages = {
       git,
       linux,
       vs,
-      cpanel,
+      github,
       windows
       
     ]
