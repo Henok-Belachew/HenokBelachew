@@ -5,6 +5,27 @@ import experienceData from "../Data/ExperienceData";
 import EducationTimeline from "./EducationTimeline";
 import ExperienceTimeline from "./ExperienceTimeline";
 
+
+interface SkillProps {
+  skillName: string;
+  proficiency: number;
+  
+}
+
+const SkillItem: React.FC<SkillProps> = ({ skillName, proficiency }) => {
+  return (
+    <li className="skills-item flex flex-col gap-1">
+      <div className="flex gap-1 text-white">
+        <h5 className="h5">{skillName}</h5>
+        <data className="font-[200]" value={proficiency}>{proficiency} </data>
+      </div>
+      <div className="skill-progress-bg">
+        <div className="skill-progress-fill" style={{ width: `${proficiency}%` }}></div>
+      </div>
+    </li>
+  );
+};
+
 function Resume({activeTab}: {activeTab: string}) {
   return (
     <div className={`article about ${activeTab === 'Resume' ? 'active' : ''}`}>
@@ -66,6 +87,16 @@ function Resume({activeTab}: {activeTab: string}) {
           </ol>
 
         </section>
+
+        {/* Language */}
+
+        <h3 className="h3 skills-title">My Skills</h3>
+        <ul className="skills-list2 content-card">
+          <SkillItem skillName="Web design" proficiency={80} />
+          <SkillItem skillName="Mobile App Design" proficiency={95} />
+          <SkillItem skillName="Backend Development" proficiency={70} />
+          <SkillItem skillName="Frontend Development" proficiency={90} />
+        </ul>
       
     </div>
   )
