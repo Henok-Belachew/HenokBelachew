@@ -8,8 +8,8 @@ const ServiceItem = ({ title, icon, description }: ServiceItemProps) => {
     return (
       <li className="service-item">
         <div className="service-icon-box">
-          <img src={icon} alt={title} width="80" />
-          {/* <div className="w-[80px]">
+          <img src={icon} alt={title} className="4-md:w-[80px]"  />
+          {/* <div >
             {icon}
           </div> */}
           

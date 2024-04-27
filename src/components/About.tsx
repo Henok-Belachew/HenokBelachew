@@ -70,7 +70,7 @@ function About({activeTab}: {activeTab: string}) {
         
         <section className="professional-skills">
 
-          <h3 className="h3 professional-skills-title">Professional Skillsets</h3>
+          <h3 className="h3 professional-skills-title text-center 4-md:text-left">Professional Skillsets</h3>
 
           {/* Filter */}
           <ul className="filter-list">
@@ -181,7 +181,7 @@ function About({activeTab}: {activeTab: string}) {
         
         <section className="professional-skills">
 
-          <h3 className="h3 professional-skills-title">Tools I Use</h3>
+          <h3 className="h3 professional-skills-title text-center 4-md:text-left">Tools I Use</h3>
 
          
 

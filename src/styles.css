@@ -859,6 +859,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    align-items: center;
+    justify-content: center;
    }
   
   
@@ -1442,6 +1444,13 @@
     /* professional-skills */
   
     .professional-skills-title { margin-bottom: 25px; }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: start;
+     }
   
     .professional-skills-list {
       gap: 30px;
