@@ -15,9 +15,9 @@ interface SkillProps {
 const SkillItem: React.FC<SkillProps> = ({ skillName, proficiency }) => {
   return (
     <li className="skills-item flex flex-col gap-1">
-      <div className="flex gap-1 text-white">
+      <div className="flex gap-3 text-white">
         <h5 className="h5">{skillName}</h5>
-        <data className="font-[200]" value={proficiency}>{proficiency} </data>
+        <data className="font-[200]" value={proficiency}>{proficiency}%</data>
       </div>
       <div className="skill-progress-bg">
         <div className="skill-progress-fill" style={{ width: `${proficiency}%` }}></div>
@@ -92,7 +92,7 @@ function Resume({activeTab}: {activeTab: string}) {
 
         <h3 className="h3 skills-title">My Skills</h3>
         <ul className="skills-list2 content-card">
-          <SkillItem skillName="Web design" proficiency={80} />
+          <SkillItem skillName="Web design" proficiency={80}  />
           <SkillItem skillName="Mobile App Design" proficiency={95} />
           <SkillItem skillName="Backend Development" proficiency={70} />
           <SkillItem skillName="Frontend Development" proficiency={90} />

@@ -53,7 +53,7 @@ function About({activeTab}: {activeTab: string}) {
                   key={index}
                   icon={item.icon}
                   title={item.title}
-                  description={item.text}
+                  description={item.description}
                 />
               ))
             }
