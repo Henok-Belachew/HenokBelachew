@@ -941,6 +941,16 @@
     visibility: visible;
     pointer-events: all;
   }
+
+.select-list.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  .select-list.active {
+    color: var(--orange-yellow-crayola);
+  }
   
   .select-item button {
     background: var(--eerie-black-2);

@@ -6,12 +6,16 @@ import ServiceItem from "./ServiceItem"
 import skillsetImages from "../Data/ProfessionalSkillsData"
 import { useState } from "react"
 
+import { IoIosArrowDown } from "react-icons/io";
+
 
 
 
 function About({activeTab}: {activeTab: string}) {
 
-  const [filter, setFilter] = useState('All')
+  const [filter, setFilter] = useState('')
+  const [selectbox, setSelectbox] = useState(false)
+
   return (
     <div className={`article about ${activeTab === 'About' ? 'active' : ''}`}>
          <header>
@@ -73,7 +77,7 @@ function About({activeTab}: {activeTab: string}) {
           <ul className="filter-list">
 
             <li className="filter-item">
-              <button className={filter === 'All' ? 'active' : ''} onClick={() => setFilter('All')} >All</button>
+              <button className={filter === 'All' || filter === '' ? 'active' : ''} onClick={() => setFilter('All')} >All</button>
             </li>
 
             <li className="filter-item">
@@ -88,13 +92,67 @@ function About({activeTab}: {activeTab: string}) {
 
           </ul>
 
+          {/* Filter Select Box */}
+
+          <div className="filter-select-box">
+            
+            <div className="flex flex-col gap-2">
+
+              
+
+                {/* <p className="select-value text-white-1 font-[300]">Select category</p> */}
+
+                <button onClick={() => setSelectbox(!selectbox)} className="filter-select">
+
+                  
+                  <div className="select-value" >
+                    
+                    { filter === "" ? "Select Category" : 
+                    filter === "All" ? "All" :
+                    filter === "UI/UX" ? "UI/UX Design" :
+                    filter === "Web" ? "Web development" : ""}
+                    
+                    
+                    
+                    </div>
+
+                  <div className="select-icon">
+                    <IoIosArrowDown />
+                  </div>
+
+                </button>
+
+            </div>
+
+            
+
+            <ul className={`select-list  ${selectbox ? 'active' : ''}`}>
+
+              
+
+              <li className="select-item">
+                <button onClick={() =>{ setFilter('All'); setSelectbox(!selectbox)}} >All</button>
+              </li>
+
+              <li className="select-item">
+                <button onClick={() => {setFilter('UI/UX'); setSelectbox(!selectbox)}} >UI/UX Design</button>
+              </li>
+
+              <li className="select-item">
+                <button onClick={() => {setFilter('Web'); setSelectbox(!selectbox)}} >Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
           {/* Skills List  */}
           <ul className="skills-list has-scrollbar">  
 
-           { filter === 'All' && skillsetImages.all.map((img) => (
+           { filter === 'All' || filter === '' ? skillsetImages.all.map((img) => (
 
                 <img className="skillbox h-[80px]"  src={img}></img>
-                ))
+                )) : ""
            }  
 
            { filter === 'UI/UX' && skillsetImages.ui_ux_design.map((img) => (
