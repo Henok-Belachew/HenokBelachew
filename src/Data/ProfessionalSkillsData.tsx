@@ -17,7 +17,7 @@ import git from "../assets/images/Tools/Git.svg";
 import linux from "../assets/images/Tools/Linux.svg";
 import vs from "../assets/images/Tools/Visual Studio Code 2019.svg";
 import windows from "../assets/images/Tools/Windows 11.svg";
-import cpanel from "../assets/images/Tools/Cpanel.svg"
+
 import github from "../assets/images/Tools/Github.svg"
 
 

@@ -1,5 +1,5 @@
 // ContactItem.tsx
-import { FaRegCopy } from "react-icons/fa6";
+
 import { IoCopyOutline } from "react-icons/io5";
 interface ContactItemProps {
   icon: JSX.Element;
