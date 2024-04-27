@@ -7,6 +7,7 @@ import { FaYoutube } from "react-icons/fa6";
 import { MdOutlineDateRange } from "react-icons/md";
 import myavator from "../assets/images/my-avatar.png";
 import ContactItem from './ContactItem';
+import Separator from './Separator';
 
 interface ContactItem {
   icon: JSX.Element;
@@ -59,12 +60,15 @@ const Sidebar: React.FC= () => {
         </div>
         <button className="info_more-btn" onClick={toggleExpanded}>
           <span>Show Contacts</span>
-          <IoIosArrowDown />
+          <IoIosArrowDown className='4-md:hidden' />
         </button>
       </div>
+
       {true && (
         <div className="sidebar-info_more">
-          <div className="separator"></div>
+
+<Separator />
+          
           <ul className="contacts-list">
           {contactItems.map((item, index) => (
           <ContactItem
@@ -76,7 +80,9 @@ const Sidebar: React.FC= () => {
           />
         ))}
           </ul>
-          <div className="separator"></div>
+
+          <Separator />
+
           <ul className="social-list">
             <li className="social-item">
               <a href="#" className="social-link">

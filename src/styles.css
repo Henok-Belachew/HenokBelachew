@@ -1807,6 +1807,7 @@
     main {
       max-width: 1200px;
       margin-inline: auto;
+      min-height: 100%;
       display: flex;
       justify-content: center;
       align-items: stretch;
@@ -1827,14 +1828,13 @@
      */
   
     .sidebar {
-      position: relative;
-      /* top: 60px; */
-      max-height: max-content;
-      height: 100%;
-      margin-bottom: 0;
-      padding-top: 60px;
-      z-index: 1;
-      /* width: 300px */
+      position: sticky;
+    top: 60px;
+    max-height: max-content;
+    height: 100%;
+    margin-bottom: 0;
+    padding-top: 60px;
+    z-index: 1;
     }
   
     .sidebar-info { flex-direction: column; }
