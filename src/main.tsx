@@ -12,7 +12,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   // basename={process.env.PUBLIC_URL}
-  <BrowserRouter >
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
   <React.StrictMode>
 
 
