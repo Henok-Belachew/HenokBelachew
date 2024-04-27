@@ -1,4 +1,4 @@
-import { FaInstagram, FaGithub , FaYoutube, FaSquareBehance} from "react-icons/fa6";
+import { FaGithub , FaYoutube, FaSquareBehance} from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io";
 
  
@@ -6,8 +6,7 @@ import { IoLogoLinkedin } from "react-icons/io";
 function SocialMedia() {
 
     const socialMedia = [
-        { icon: <FaInstagram />, 
-        link: "https://www.instagram.com/henok12belachew/" },
+        
         { icon: <FaYoutube />, 
         link: "https://www.youtube.com/@HenokTutorials" },
         { icon: <FaGithub />, 

@@ -1,6 +1,6 @@
 
 
-import serviceData from "../Data/ServiceData"
+import ServiceData from "../Data/ServiceData"
 import ServiceItem from "./ServiceItem"
 
 import skillsetImages from "../Data/ProfessionalSkillsData"
@@ -26,17 +26,15 @@ function About({activeTab}: {activeTab: string}) {
 
         <section className="about-text">
           <p>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-            I enjoy
-            turning complex problems into simple, beautiful and intuitive designs.
+          Hi there, I'm Henok Belachew, currently in my final year pursuing Computer Engineering at Addis Ababa Science and Technology University (AASTU). However, my passion for creating intuitive user experiences and proficiency in UI design and full-stack development stems from self-directed learning and practical experience.
           </p>
 
           <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
+          My primary programming language is JavaScript, allowing me to seamlessly merge design finesse with technical expertise. I specialize in frontend technologies such as React, Tailwind CSS, and various frontend libraries for crafting engaging user interfaces. In backend development, I leverage Node.js to ensure secure and efficient functionality. Proficient in database management, I work with tools like MongoDB or SQL for streamlined data handling.
+          </p>
+
+          <p>
+          My journey revolves around self-driven learning and hands-on experience, focusing on integrating captivating design principles with robust technical solutions to deliver digital products that are both engaging and pragmatic.
           </p>
         </section>
 
@@ -49,14 +47,16 @@ function About({activeTab}: {activeTab: string}) {
 
           <ul className="service-list">
 
-            {serviceData.map((item, index) => (
-              <ServiceItem
-                key={index}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
-            ))}
+            {
+              ServiceData.map((item: any, index: number) => (
+                <ServiceItem
+                  key={index}
+                  icon={item.icon}
+                  title={item.title}
+                  description={item.text}
+                />
+              ))
+            }
 
             
 
@@ -68,7 +68,6 @@ function About({activeTab}: {activeTab: string}) {
         
         {/* Profesional Skillsets */}
         
-
         <section className="professional-skills">
 
           <h3 className="h3 professional-skills-title">Professional Skillsets</h3>
@@ -166,6 +165,37 @@ function About({activeTab}: {activeTab: string}) {
                 <img className="skillbox h-[80px]"  src={img}></img>
                 ))
            }      
+
+            
+            
+          
+
+
+          </ul>
+
+        </section>
+
+
+
+        {/* Tools I Use */}
+        
+        <section className="professional-skills">
+
+          <h3 className="h3 professional-skills-title">Tools I Use</h3>
+
+         
+
+          {/* Tools List  */}
+          <ul className="skills-list has-scrollbar"> 
+
+           {
+            skillsetImages.tools.map((img) => (
+
+                <img className="skillbox h-[80px]"  src={img}></img>
+            ))
+           }
+
+                
 
             
             

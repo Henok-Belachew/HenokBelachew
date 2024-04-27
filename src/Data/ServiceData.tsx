@@ -3,7 +3,7 @@ import service1 from "../assets/images/icon-design.svg"
 import service3 from "../assets/images/icon-dev.svg"
 import service4 from "../assets/images/database.svg"
 
-const serviceData = [
+const ServiceData = [
     {
       title: "Website design",
       icon: service1,
@@ -29,4 +29,4 @@ const serviceData = [
   
   
 
-  export default serviceData
+  export default ServiceData

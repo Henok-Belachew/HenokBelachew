@@ -10,6 +10,18 @@ import tailwindCss from "../assets/images/Skillsets/Tailwind CSS.svg";
 import typescript from "../assets/images/Skillsets/TypeScript.svg";
 import adobePhotoshop from "../assets/images/Skillsets/Adobe Photoshop.svg";
 import adobeillustrator from "../assets/images/Skillsets/Adobe Illustrator.svg"
+// Tools
+
+import git from "../assets/images/Tools/Git.svg";
+import linux from "../assets/images/Tools/Linux.svg";
+import vs from "../assets/images/Tools/Visual Studio Code 2019.svg";
+import windows from "../assets/images/Tools/Windows 11.svg";
+import cpanel from "../assets/images/Tools/Cpanel.svg"
+// import git from "../assets/images/Tools/Git.svg";
+// import linux from "../assets/images/Tools/Linux.svg";
+// import vs from "../assets/images/Tools/Visual Studio Code 2019.svg"
+// import windows from "../assets/images/Tools/Windows.svg";
+// import cpanel from "../assets/images/Tools/Cpanel.svg"
 
 export const skillsetImages = {
     all: [
@@ -41,6 +53,14 @@ export const skillsetImages = {
       reactLogo,
       tailwindCss,
       typescript
+    ],
+    tools: [
+      git,
+      linux,
+      vs,
+      cpanel,
+      windows
+      
     ]
   };
   
