@@ -3,6 +3,9 @@ import service2 from "../assets/images/icon-design.svg"
 import service3 from "../assets/images/icon-dev.svg"
 import service4 from "../assets/images/icon-dev.svg"
 
+import serviceData from "../Data/ServiceData"
+import ServiceItem from "./ServiceItem"
+
 function About({activeTab}: {activeTab: string}) {
   return (
     <div className={`article about ${activeTab === 'About' ? 'active' : ''}`}>
@@ -35,149 +38,22 @@ function About({activeTab}: {activeTab: string}) {
 
           <ul className="service-list">
 
-            <li className="service-item">
+            {serviceData.map((item, index) => (
+              <ServiceItem
+                key={index}
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
 
-              <div className="service-icon-box">
-              <img src={service4}
-                 alt="design icon" width="40"/>
-              </div>
-
-              <div className="service-content-box">
-                <h4 className="h4 service-item-title">Web design</h4>
-
-                <p className="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li className="service-item">
-
-              <div className="service-icon-box">
-                <img src={service1} alt="Web development icon" width="40"/>
-              </div>
-
-              <div className="service-content-box">
-                <h4 className="h4 service-item-title">Web development</h4>
-
-                <p className="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li className="service-item">
-
-              <div className="service-icon-box">
-              <img src={service2} alt="mobile app icon" width="40"/>
-              </div>
-
-              <div className="service-content-box">
-                <h4 className="h4 service-item-title">Mobile apps</h4>
-
-                <p className="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li className="service-item">
-
-              <div className="service-icon-box">
-              <img src={service3}alt="camera icon" width="40"/>
-              </div>
-
-              <div className="service-content-box">
-                <h4 className="h4 service-item-title">Photography</h4>
-
-                <p className="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
-              </div>
-
-            </li>
+            
 
           </ul>
 
         </section>
 
-        <section className="service">
-
-          <h3 className="h3 service-title">What i'm doing</h3>
-
-          <ul className="service-list">
-
-            <li className="service-item">
-
-              <div className="service-icon-box">
-              <img src={service4}
-                 alt="design icon" width="40"/>
-              </div>
-
-              <div className="service-content-box">
-                <h4 className="h4 service-item-title">Web design</h4>
-
-                <p className="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li className="service-item">
-
-              <div className="service-icon-box">
-                <img src={service1} alt="Web development icon" width="40"/>
-              </div>
-
-              <div className="service-content-box">
-                <h4 className="h4 service-item-title">Web development</h4>
-
-                <p className="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li className="service-item">
-
-              <div className="service-icon-box">
-              <img src={service2} alt="mobile app icon" width="40"/>
-              </div>
-
-              <div className="service-content-box">
-                <h4 className="h4 service-item-title">Mobile apps</h4>
-
-                <p className="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li className="service-item">
-
-              <div className="service-icon-box">
-              <img src={service3}alt="camera icon" width="40"/>
-              </div>
-
-              <div className="service-content-box">
-                <h4 className="h4 service-item-title">Photography</h4>
-
-                <p className="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
+        
 
 
     </div>
