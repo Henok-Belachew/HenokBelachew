@@ -50,7 +50,7 @@ function About({activeTab}: {activeTab: string}) {
 
         <section className="service">
 
-          <h3 className="h3 service-title">What i'm doing</h3>
+          <h3 className="h3 service-title">My services</h3>
 
           <ul className="service-list">
 

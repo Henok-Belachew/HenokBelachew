@@ -50,9 +50,9 @@
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(240, 67%, 55%), 
-    hsl(207, 100%, 47%)
-
+    
+    #1f568b,
+    #1c71b9
 
   );
   

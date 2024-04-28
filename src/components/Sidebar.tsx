@@ -102,7 +102,7 @@ const Sidebar: React.FC= () => {
           <div className='flex xl:flex-col gap-2 items-center justify-between'>
               <SocialMedia />
 
-              <p className='contact-title text-white-2'>
+              <p className='contact-title text-white-2 opacity-50'>
               Page Visits <strong>234</strong>
               </p>
           </div>
