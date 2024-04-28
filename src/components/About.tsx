@@ -153,7 +153,7 @@ function About({activeTab}: {activeTab: string}) {
           </div>
 
           {/* Skills List  */}
-          <ul className="skills-list mx-auto block w-fit has-scrollbar">  
+          <ul className="skills-list has-scrollbar">  
 
            { filter === 'All' || filter === '' ? skillsetImages.all.map((img) => (
 
