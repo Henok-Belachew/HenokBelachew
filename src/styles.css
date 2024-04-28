@@ -572,6 +572,17 @@
     border-radius: 15px;
     border: 1px solid var(--jet);
   }
+
+  .download-btn {
+    background: var(--bg-gradient-jet);
+    border-radius: inherit;
+    padding: 5px 10px;
+
+    /* width: 40px; */
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--jet);
+  }
   
   .professional-skills { margin-bottom: 30px; }
   

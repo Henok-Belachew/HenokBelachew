@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { IoIosArrowDown, IoIosPhonePortrait } from "react-icons/io";
 
 import { IoMailOpenOutline, IoLocationOutline } from "react-icons/io5";
-import { RiVerifiedBadgeFill } from "react-icons/ri";
+
 import { MdVerified } from "react-icons/md";
 
 import SocialMedia from './SocialMedia';
@@ -58,7 +58,7 @@ const Sidebar: React.FC= () => {
     <aside className={`sidebar  ${isExpanded ? 'active' : ''}`} >
       <div className="sidebar-info">
         <figure className="avatar-box">
-          <img src={myavator} alt="Richard Hanrick" width="40" />
+          <img src={myavator} alt="Richard Hanrick" width="80" />
         </figure>
         <div className="info-content">
           <div className='flex gap-2 mb-2 text-[20px]  xl:justify-center items-center'>

@@ -5,6 +5,8 @@ import experienceData from "../Data/ExperienceData";
 import EducationTimeline from "./EducationTimeline";
 import ExperienceTimeline from "./ExperienceTimeline";
 
+import { MdOutlineFileDownload } from "react-icons/md";
+
 
 interface SkillProps {
   skillName: string;
@@ -30,7 +32,18 @@ function Resume({activeTab}: {activeTab: string}) {
   return (
     <div className={`article about ${activeTab === 'Resume' ? 'active' : ''}`}>
         <header>
-          <h2 className="h2 article-title">Resume</h2>
+          <h2 className="h2 article-title justify-between lg:justify-start flex items-center gap-4 ">
+            <span>Resume</span> 
+          
+          <div className="flex download-btn gap-3  items-center">
+            
+            <span className="lg:hidden text-md1-4 font-300">Download</span>
+
+          <MdOutlineFileDownload style={{ fontWeight: 'thin' }} className="" />
+            
+          </div>
+           </h2>
+          
         </header>
 
         {/* Education */}
