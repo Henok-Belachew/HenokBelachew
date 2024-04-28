@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { IoIosArrowDown, IoIosPhonePortrait } from "react-icons/io";
 
 import { IoMailOpenOutline, IoLocationOutline } from "react-icons/io5";
+import { RiVerifiedBadgeFill } from "react-icons/ri";
+import { MdVerified } from "react-icons/md";
 
 import SocialMedia from './SocialMedia';
 
@@ -53,17 +55,22 @@ const Sidebar: React.FC= () => {
   };
 
   return (
-    <aside className={`sidebar ${isExpanded ? 'active' : ''}`} >
+    <aside className={`sidebar  ${isExpanded ? 'active' : ''}`} >
       <div className="sidebar-info">
         <figure className="avatar-box">
-          <img src={myavator} alt="Richard Hanrick" width="80" />
+          <img src={myavator} alt="Richard Hanrick" width="40" />
         </figure>
         <div className="info-content">
+          <div className='flex gap-2 mb-2 text-[20px]  xl:justify-center items-center'>
           <h1 className="name" title="Henok Belachew">Henok Belachew</h1>
+          <MdVerified className='text-[20px] text-orange-yellow-crayola' />
+
+          </div>
+          
           <p className="title">Software Engineer & UI/UX Designer</p>
         </div>
         <button className="info_more-btn" onClick={toggleExpanded}>
-          <span>Show Contacts</span>
+          <span>{isExpanded ? 'Hide Contacts': 'Show Contacts'} </span>
           <IoIosArrowDown className={`4-md:hidden ${isExpanded ? 'rotate-180' : ''}` } />
         </button>
       </div>
@@ -92,7 +99,16 @@ const Sidebar: React.FC= () => {
 
           
 
-            <SocialMedia />
+          <div className='flex xl:flex-col gap-2 items-center justify-between'>
+              <SocialMedia />
+
+              <p className='contact-title text-white-2'>
+              Page Visits <strong>234</strong>
+              </p>
+          </div>
+
+            
+            
             
             
           
