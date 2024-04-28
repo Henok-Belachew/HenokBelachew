@@ -15,7 +15,7 @@ const Certificates = [
         img: alxafrica
     },
     {
-        id: 3,
+        id: 2,
         name: 'Google UX Design Spcialization',
         link: 'https://www.coursera.org/account/accomplishments/specialization/certificate/JCWRN8W6DAYF',
         issuingOrg: "Coursera",
@@ -24,7 +24,7 @@ const Certificates = [
 
     },
     {
-        id: 2,
+        id: 3,
         name: 'Networking Basics',
         link: 'https://www.credly.com/badges/8c86e60b-5634-44a4-bf3b-193bb4e51888/public_url',
         issuingOrg: "Cisco Networking Academy",
@@ -36,7 +36,7 @@ const Certificates = [
         id: 4,
         name: 'Responsive Web Design',
         link: 'https://www.freecodecamp.org/certification/Henok-Belachew/responsive-web-design',
-        issuingOrg: "Coursera",
+        issuingOrg: "FreeCodeCamp",
         dateIssue: "Dec 2022",
         img: freecodecamp
     },

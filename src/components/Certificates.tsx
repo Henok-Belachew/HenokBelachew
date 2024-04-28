@@ -14,29 +14,47 @@ function Certificates({activeTab}: {activeTab: string}) {
           </header>
 
 
-          <div className="certificates gap-[20px] justify-between flex flex-wrap">
+          <div className="certificates gap-[20px] 4-md:gap-[42px] lg:gap-[42px] flex flex-wrap">
 
             {
-              CertificatesData.map((data) => (
-                <div className="w-[400px] mx-auto lg:mx-0 text-white-2">
-                  <img className="w-[400px] bg-cover h-[265px] " src={data.img} alt="" />
+              CertificatesData.map((data, ) => (
+                <>
+                <div className="w-[250px] mx-auto lg:mx-0 text-white-2">
+                  <img className="w-[250px] bg-cover h-[145px] " src={data.img} alt="" />
 
-                  <div className="mt-3">
-                    <h1>{data.name}</h1>
-                    <p className="font-[200] text-white-2 opacity-80">{data.issuingOrg}</p>
+                  <div className="mt-3 flex flex-col gap-2">
 
-                    <span className="flex  items-center justify-between">
-                      <p className="font-[200]">Issued {data.dateIssue}</p>
+                    <div className="flex flex-col gap-1">
+                      <h1>{data.name}</h1>
+                      <p className="flex font-[300] text-white-2 opacity-80">{data.issuingOrg}</p>
+                    </div>
+                    
+                    <div className="flex font-[200] text-white-2 opacity-80 justify-between">
+                    
+                    
+                    <p className="">Issued {data.dateIssue}</p>
 
-                      <span onClick={() => window.open(data.link, '_blank')} className="flex gap-2 items-center opacity-70 hover:opacity-100 hover:text-orange-yellow-crayola hover:border-orange-yellow-crayola border px-8 py-1 rounded-lg cursor-pointer">
+                    <span onClick={() => window.open(data.link, '_blank')} className="flex gap-2 items-center opacity-70 hover:opacity-100 hover:text-orange-yellow-crayola justify-center cursor-pointer">
                         
                         <span >Verify</span>
 
                         <RxExternalLink />
 
                       </span>
-                      
-                    </span>
+
+                    
+
+
+                    </div>
+
+                    {/* Description */}
+                    {/* <p className="my-2">
+                    I learned essential networking concepts with Cisco: network types, cabling, IP navigation, protocols, apps, and built a home wireless network. 
+
+                    </p> */}
+                    
+
+                    
 
                   </div>
                   
@@ -45,6 +63,15 @@ function Certificates({activeTab}: {activeTab: string}) {
 
                 </div>
                 
+                
+                {
+                  CertificatesData.length - 1 !== CertificatesData.indexOf(data) && <div className="w-full lg:hidden h-px bg-jet my-4"></div>
+                  
+                }
+                
+                
+
+                </>
               ))
             }
 
