@@ -77,10 +77,10 @@ function About({activeTab}: {activeTab: string}) {
         
         <section className="professional-skills">
 
-          <h3 className="h3 professional-skills-title text-center 4-md:text-left">Professional Skillsets</h3>
+          <h3 className="h3 professional-skills-title ">Professional Skillsets</h3>
 
           {/* Filter */}
-          <ul className="filter-list">
+          <ul className="filter-list ">
 
             <li className="filter-item">
               <button className={filter === 'All' || filter === '' ? 'active' : ''} onClick={() => setFilter('All')} >All</button>
@@ -153,23 +153,23 @@ function About({activeTab}: {activeTab: string}) {
           </div>
 
           {/* Skills List  */}
-          <ul className="skills-list has-scrollbar">  
+          <ul className="skills-list mx-auto block w-fit has-scrollbar">  
 
            { filter === 'All' || filter === '' ? skillsetImages.all.map((img) => (
 
-                <img className="skillbox h-[80px]"  src={img}></img>
+                <img className="skillbox h-[65px] 4-md:h-[80px]"  src={img}></img>
                 )) : ""
            }  
 
            { filter === 'UI/UX' && skillsetImages.ui_ux_design.map((img) => (
 
-                <img className="skillbox h-[80px]"  src={img}></img>
+                <img className="skillbox h-[65px] 4-md:h-[80px]"  src={img}></img>
                 ))
            }  
 
            { filter === 'Web' && skillsetImages.web_development.map((img) => (
 
-                <img className="skillbox h-[80px]"  src={img}></img>
+                <img className="skillbox h-[60px] 4-md:h-[80px]"  src={img}></img>
                 ))
            }      
 
@@ -188,7 +188,7 @@ function About({activeTab}: {activeTab: string}) {
         
         <section className="professional-skills">
 
-          <h3 className="h3 professional-skills-title text-center 4-md:text-left">Tools I Use</h3>
+          <h3 className="h3 professional-skills-title ">Tools I Use</h3>
 
          
 
@@ -198,7 +198,7 @@ function About({activeTab}: {activeTab: string}) {
            {
             skillsetImages.tools.map((img) => (
 
-                <img className="skillbox h-[80px]"  src={img}></img>
+                <img className="skillbox h-[65px] 4-md:h-[80px]"  src={img}></img>
             ))
            }
 

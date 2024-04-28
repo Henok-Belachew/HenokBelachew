@@ -17,7 +17,7 @@ interface SkillProps {
 const SkillItem: React.FC<SkillProps> = ({ skillName, proficiency }) => {
   return (
     <li className="skills-item flex flex-col gap-1">
-      <div className="flex gap-3 text-white">
+      <div className="flex justify-between gap-3 text-white">
         <h5 className="h5">{skillName}</h5>
         <data className="font-[200]" value={proficiency}>{proficiency}%</data>
       </div>
@@ -42,11 +42,11 @@ const resume:string = "https://raw.githubusercontent.com/Henok-Belachew/Henok-Be
           <h2 className="h2 article-title justify-between lg:justify-start flex items-center gap-4 ">
             <span>Resume</span> 
           
-          <div onClick={() => window.open(resume, '_blank')} className="flex download-btn gap-3  items-center">
+          <div onClick={() => window.open(resume, '_blank')} className="flex download-btn gap-3 px-[14px] py-[5px] xl:p-0 xl:w-[50px] xl:h-[50px]  items-center">
             
             <span className="lg:hidden text-md1-4 font-300">Download</span>
 
-          <MdOutlineFileDownload style={{ fontWeight: 'thin' }} className="" />
+          <MdOutlineFileDownload style={{ fontWeight: 'thin' }} className="text-[25px] block mx-auto" />
             
           </div>
            </h2>
@@ -111,7 +111,7 @@ const resume:string = "https://raw.githubusercontent.com/Henok-Belachew/Henok-Be
         {/* Language */}
 
         <h3 className="h3 skills-title">My Skills</h3>
-        <ul className="skills-list2 content-card">
+        <ul className="content-card">
           <SkillItem skillName="Web design" proficiency={80}  />
           <SkillItem skillName="Mobile App Design" proficiency={95} />
           <SkillItem skillName="Backend Development" proficiency={70} />

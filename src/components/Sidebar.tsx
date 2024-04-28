@@ -60,14 +60,16 @@ const Sidebar: React.FC= () => {
         <figure className="avatar-box">
           <img src={myavator} alt="Richard Hanrick" width="80" />
         </figure>
-        <div className="info-content">
-          <div className='flex gap-2 mb-2 text-[20px]  xl:justify-center items-center'>
+        <div className="info-content flex flex-col gap-1 3-md:gap-2">
+          <div className='flex gap-2 text-[20px]  xl:justify-center items-center'>
           <h1 className="name" title="Henok Belachew">Henok Belachew</h1>
           <MdVerified className='text-[20px] text-orange-yellow-crayola' />
 
           </div>
           
           <p className="title">Software Engineer & UI/UX Designer</p>
+          <p className="title text-[#141d2b]" style={{"background": "var(--orange-yellow-crayola)", "color":"#141d2b", "fontWeight": "500" }}>Welcome to my page!</p>
+          {/* <p className='text-white-2 text-8 font-[200] xl:text-center' style={{"background": "none"}}>Welcome to my page!</p> */}
         </div>
         <button className="info_more-btn" onClick={toggleExpanded}>
           <span>{isExpanded ? 'Hide Contacts': 'Show Contacts'} </span>

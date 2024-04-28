@@ -89,6 +89,7 @@
     --fs-8: 11px;
   
     /* font-weight */
+    --fw-200: 200;
     --fw-300: 300;
     --fw-400: 400;
     --fw-500: 500;
@@ -278,9 +279,9 @@
   
   .content-card {
     position: relative;
-    background: var(--border-gradient-onyx);
+    /* background: var(--border-gradient-onyx); */
     padding: 15px;
-    padding-top: 45px;
+    /* padding-top: 45px; */
     border-radius: 14px;
     box-shadow: var(--shadow-2);
     cursor: pointer;
@@ -356,6 +357,17 @@
     font-weight: var(--fw-300);
     width: max-content;
     padding: 3px 12px;
+    border-radius: 8px;
+  }
+
+  .welcome {
+    color: var(--white-1);
+    background: var(--onyx);
+    font-size: var(--fs-8);
+    font-weight: var(--fw-300);
+    width: max-content;
+    padding: 3px 12px;
+    letter-spacing: 2px;
     border-radius: 8px;
   }
   
@@ -529,7 +541,7 @@
   
   .service-item {
     position: relative;
-    background: var(--border-gradient-onyx);
+    /* background: var(--border-gradient-onyx); */
     padding: 20px;
     border-radius: 14px;
     box-shadow: var(--shadow-2);
@@ -570,17 +582,18 @@
     border-radius: inherit;
     padding: 15px;
     border-radius: 15px;
+    /* width: 100px; */
     border: 1px solid var(--jet);
   }
 
   .download-btn {
     background: var(--bg-gradient-jet);
     border-radius: inherit;
-    padding: 5px 10px;
+    /* padding: 5px 14px; */
 
     /* width: 40px; */
     height: 40px;
-    border-radius: 5px;
+    border-radius: 15px;
     border: 1px solid var(--jet);
     cursor: pointer;
   }
@@ -876,9 +889,14 @@
   .skills-list {
     display: flex;
     flex-wrap: wrap;
+    /* flex-direction: column; */
     gap: 10px;
     align-items: center;
-    justify-content: center;
+    /* width: 440px; */
+    /* margin-left: auto ;
+    margin-right: auto ; */
+    /* justify-content: center; */
+    justify-content: start;
    }
   
   
@@ -1467,7 +1485,9 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      justify-content: start;
+      width: fit-content;
+
+      
      }
   
     .professional-skills-list {
@@ -1888,7 +1908,7 @@
     .sidebar {
       position: sticky;
     top: 60px;
-    min-height: 695px;
+    min-height: 735px;
     /* height: 100%; */
     margin-bottom: 0;
     padding-top: 40px;
