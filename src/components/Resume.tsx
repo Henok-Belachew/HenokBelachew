@@ -34,13 +34,15 @@ function Resume({activeTab}: {activeTab: string}) {
     window.scrollTo(0, 0); // Scroll to the top of the page
   
 }, []);
+
+const resume:string = "https://raw.githubusercontent.com/Henok-Belachew/Henok-Belachew/master/MY%20CV.pdf"
   return (
     <div className={`article about ${activeTab === 'Resume' ? 'active' : ''}`}>
         <header>
           <h2 className="h2 article-title justify-between lg:justify-start flex items-center gap-4 ">
             <span>Resume</span> 
           
-          <div className="flex download-btn gap-3  items-center">
+          <div onClick={() => window.open(resume, '_blank')} className="flex download-btn gap-3  items-center">
             
             <span className="lg:hidden text-md1-4 font-300">Download</span>
 
