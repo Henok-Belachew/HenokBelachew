@@ -7,11 +7,18 @@ import skillsetImages from "../Data/ProfessionalSkillsData"
 import { useState } from "react"
 
 import { IoIosArrowDown } from "react-icons/io";
-
+import { useEffect } from "react";
 
 
 
 function About({activeTab}: {activeTab: string}) {
+
+  useEffect(() => {
+    
+      window.scrollTo(0, 0); // Scroll to the top of the page
+    
+  }, []);
+
 
   const [filter, setFilter] = useState('')
   const [selectbox, setSelectbox] = useState(false)

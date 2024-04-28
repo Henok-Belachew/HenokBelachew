@@ -4,7 +4,7 @@ import educationData from "../Data/EducationData";
 import experienceData from "../Data/ExperienceData";
 import EducationTimeline from "./EducationTimeline";
 import ExperienceTimeline from "./ExperienceTimeline";
-
+import { useEffect } from "react";
 import { MdOutlineFileDownload } from "react-icons/md";
 
 
@@ -29,6 +29,11 @@ const SkillItem: React.FC<SkillProps> = ({ skillName, proficiency }) => {
 };
 
 function Resume({activeTab}: {activeTab: string}) {
+  useEffect(() => {
+    
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  
+}, []);
   return (
     <div className={`article about ${activeTab === 'Resume' ? 'active' : ''}`}>
         <header>
