@@ -14,6 +14,7 @@ import Contact from "./components/Contact"
 function App() {
 
   const [activeTab, setActiveTab] = useState('About');	
+  const [darkmode, setDarkmode] = useState(true);
   
   
   return (
@@ -24,7 +25,7 @@ function App() {
    <main className="main " >
 
   
-        <Sidebar/>
+        <Sidebar darkmode={darkmode} setDarkmode={setDarkmode} />
    
 
 

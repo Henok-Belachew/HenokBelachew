@@ -5,7 +5,8 @@ import { IoIosArrowDown, IoIosPhonePortrait } from "react-icons/io";
 import { IoMailOpenOutline, IoLocationOutline } from "react-icons/io5";
 
 import { MdVerified } from "react-icons/md";
-
+// import { FaToggleOff, FaToggleOn } from "react-icons/fa6";
+import { FaToggleOn } from "react-icons/fa";
 import SocialMedia from './SocialMedia';
 
 
@@ -47,7 +48,9 @@ const contactItems: ContactItem[] = [
   }
 ];
 
-const Sidebar: React.FC= () => {
+
+function Sidebar({darkmode, setDarkmode}: {darkmode: boolean, setDarkmode: React.Dispatch<React.SetStateAction<boolean>>} ) {
+
   const [isExpanded, setIsExpanded] = useState(true);
 
   const toggleExpanded = () => {
@@ -101,12 +104,26 @@ const Sidebar: React.FC= () => {
 
           
 
-          <div className='flex xl:flex-col gap-2 items-center justify-between'>
+          <div className='flex xl:flex-col gap-4 items-center justify-between'>
               <SocialMedia />
 
-              <p className='contact-title text-white-2 opacity-50'>
-              Page Visits <strong>234</strong>
+
+
+              {/* Dark/Light Toggle Button */}
+              <span className='flex justify-between items-center gap-2'>
+              <p className={`text-[14px] text-white-2 ${darkmode ? 'opacity-50 text-white-1' : 'opacity-100 text-white-2'}`}>
+              Light 
               </p>
+
+              {darkmode == false  && <FaToggleOn onClick={()=>{setDarkmode(true)}}  className='text-white-1 opacity-100 rotate-180 text-[18px]' />}
+              
+              {darkmode == true && <FaToggleOn onClick={()=>{setDarkmode(false)}}  className='text-white-1 opacity-100 text-[18px]' />}
+              <p className={`text-[14px] text-white-2 ${darkmode ? 'opacity-100 text-white-1' : 'opacity-50 text-white-2'}`}>
+              Dark
+              </p>
+              {/* <FaToggleOn  className='text-white-1 opacity-50' /> */}
+              </span>
+              
           </div>
 
             
