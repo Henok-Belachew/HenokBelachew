@@ -8,7 +8,7 @@ function ExperienceTimeline({title, company, employementType, location, location
               <div className="flex flex-col gap-1">
 
               
-              <h4 className="h5 subtext -mt-1">{title}</h4>
+              <h4 className="h5 text-l-on-surface-11  dark:text-d-on-surface-11 subtext -mt-1">{title}</h4>
               <p className="timeline-text flex items-center gap-2">
               <HiOutlineBuildingOffice2 /> {company} · {employementType}
               </p>

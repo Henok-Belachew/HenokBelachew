@@ -17,11 +17,12 @@ interface SkillProps {
 const SkillItem: React.FC<SkillProps> = ({ skillName, proficiency }) => {
   return (
     <li className="skills-item flex flex-col gap-1">
-      <div className="flex justify-between gap-3 text-white">
-        <h5 className="h5">{skillName}</h5>
-        <data className="font-[200]" value={proficiency}>{proficiency}%</data>
+      <div className="flex justify-between gap-3 ">
+        <h5 className="h5 text-l-on-surface-12 dark:text-d-on-surface-12">{skillName}</h5>
+        <data className="font-[200]  text-l-on-surface-12  dark:text-d-on-surface-12" value={proficiency}>{proficiency}%</data>
       </div>
-      <div className="skill-progress-bg">
+      <div className="skill-progress-bg  bg-gradient-to-br to-100% from-0% dark:from-[#002744]  dark:to-[#09121B] 
+">
         <div className="skill-progress-fill" style={{ width: `${proficiency}%` }}></div>
       </div>
     </li>
@@ -37,9 +38,9 @@ function Resume({activeTab}: {activeTab: string}) {
 
 const resume:string = "https://raw.githubusercontent.com/Henok-Belachew/Henok-Belachew/master/MY%20CV.pdf"
   return (
-    <div className={`article about ${activeTab === 'Resume' ? 'active' : ''}`}>
+    <div className={`article dark:bg-d-surface-2 bg-l-surface-2 border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 about ${activeTab === 'Resume' ? 'active' : ''}`}>
         <header>
-          <h2 className="h2 article-title justify-between lg:justify-start flex items-center gap-4 ">
+          <h2 className="h2 text-l-on-surface-11 dark:text-d-on-surface-11 article-title justify-between lg:justify-start flex items-center gap-4 ">
             <span>Resume</span> 
           
           <div onClick={() => window.open(resume, '_blank')} className="flex download-btn gap-3 px-[14px] py-[5px] xl:p-0 xl:w-[50px] xl:h-[50px]  items-center">
@@ -110,8 +111,8 @@ const resume:string = "https://raw.githubusercontent.com/Henok-Belachew/Henok-Be
 
         {/* Language */}
 
-        <h3 className="h3 skills-title">My Skills</h3>
-        <ul className="content-card">
+        <h3 className="h3 skills-title text-l-on-surface-12 dark:text-d-on-surface-12">My Skills</h3>
+        <ul className="content-card bg-gradient-to-br to-100% from-0% dark:from-[#002744] to-transparent from-[#0087e831] ">
           <SkillItem skillName="Web design" proficiency={80}  />
           <SkillItem skillName="Mobile App Design" proficiency={95} />
           <SkillItem skillName="Backend Development" proficiency={70} />

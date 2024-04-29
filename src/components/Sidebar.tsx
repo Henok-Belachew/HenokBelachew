@@ -58,33 +58,39 @@ function Sidebar({darkmode, setDarkmode}: {darkmode: boolean, setDarkmode: React
   };
 
   return (
-    <aside className={`sidebar  ${isExpanded ? 'active' : ''}`} >
+    <aside className={`sidebar border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 dark:bg-d-surface-2 bg-l-surface-2 ${isExpanded ? 'active' : ''} `} >
       <div className="sidebar-info">
+
+        {/* Upper Dark/Light Button */}
       <span onClick={()=>{setDarkmode((prev)=>!prev)}} className='cursor-pointer hidden xl:flex justify-between items-center gap-2'>
-              <p className={`text-[14px] text-white-2 ${darkmode ? 'opacity-50 text-white-1' : 'opacity-100 text-white-2'}`}>
+              <p className={`text-[14px]    ${darkmode ? 'opacity-50  dark:text-d-on-surface-11' : 'opacity-100 text-l-on-surface-11'}`}>
               Light 
               </p>
 
-              {darkmode == false  && <FaToggleOn   className='text-white-1 opacity-100 rotate-180 text-[18px]' />}
+              {darkmode == false  && <FaToggleOn   className='text-l-on-surface-11 opacity-100 rotate-180 text-[18px]' />}
               
-              {darkmode == true && <FaToggleOn   className='text-white-1 opacity-100 text-[18px]' />}
-              <p className={`text-[14px] text-white-2 ${darkmode ? 'opacity-100 text-white-1' : 'opacity-50 text-white-2'}`}>
+              {darkmode == true && <FaToggleOn   className='text-d-on-surface-11 opacity-100 text-[18px]' />}
+
+
+
+              <p className={`text-[14px] ${darkmode ? 'opacity-100 text-d-on-surface-11' : 'opacity-50 text-l-on-surface-11'}`}>
               Dark
               </p>
-              {/* <FaToggleOn  className='text-white-1 opacity-50' /> */}
-              </span>
-        <figure className="avatar-box">
-          <img src={myavator} alt="Richard Hanrick" width="80" />
-        </figure>
+              {/* <FaToggleOn  className='text-l-on-s dark:text-d-on-surface-high opacity-50' /> */}
+      </span>
+
+      <figure className="avatar-box">
+        <img src={myavator} alt="Henok Belachew" width="80" />
+      </figure>
         <div className="info-content flex flex-col gap-1 3-md:gap-2">
           <div className='flex gap-2 text-[20px]  xl:justify-center items-center'>
-          <h1 className="name" title="Henok Belachew">Henok Belachew</h1>
+          <h1 className="name text-l-on-surface-11 dark:text-d-on-surface-11" title="Henok Belachew">Henok Belachew</h1>
           <MdVerified className='text-[20px] text-orange-yellow-crayola' />
 
           </div>
           
-          <p className="title">Software Engineer & UI/UX Designer</p>
-          <p className="title text-[#141d2b]" style={{"background": "var(--orange-yellow-crayola)", "color":"#141d2b", "fontWeight": "500" }}>Welcome to my page!</p>
+          <p className="title dark:text-d-on-surface-12 text-l-on-surface-1  bg-gradient-to-br to-100% from-0% dark:from-[#002744] to-transparent from-[#0087e831]   ">Software Engineer & UI/UX Designer</p>
+          {/* <p className="title text-[#141d2b] " >Welcome to my page!</p> */}
           {/* <p className='text-white-2 text-8 font-[200] xl:text-center' style={{"background": "none"}}>Welcome to my page!</p> */}
         </div>
         <button className="info_more-btn" onClick={toggleExpanded}>
@@ -123,18 +129,21 @@ function Sidebar({darkmode, setDarkmode}: {darkmode: boolean, setDarkmode: React
 
 
               {/* Dark/Light Toggle Button */}
-              <span onClick={()=>{setDarkmode((prev)=>!prev)}} className='xl:hidden cursor-pointer flex justify-between items-center gap-2'>
-              <p className={`text-[14px] text-white-2 ${darkmode ? 'opacity-50 text-white-1' : 'opacity-100 text-white-2'}`}>
+              <span onClick={()=>{setDarkmode((prev)=>!prev)}} className='cursor-pointer flex xl:hidden justify-between items-center gap-2'>
+              <p className={`text-[14px]    ${darkmode ? 'opacity-50 text-d-on-surface-12' : 'opacity-100 text-l-on-surface-1'}`}>
               Light 
               </p>
 
-              {darkmode == false  && <FaToggleOn   className='text-white-1 opacity-100 rotate-180 text-[18px]' />}
+              {darkmode == false  && <FaToggleOn   className='text-l-on-surface-1 opacity-100 rotate-180 text-[18px]' />}
               
-              {darkmode == true && <FaToggleOn   className='text-white-1 opacity-100 text-[18px]' />}
-              <p className={`text-[14px] text-white-2 ${darkmode ? 'opacity-100 text-white-1' : 'opacity-50 text-white-2'}`}>
+              {darkmode == true && <FaToggleOn   className='text-d-on-surface-12 opacity-100 text-[18px]' />}
+
+
+
+              <p className={`text-[14px] ${darkmode ? 'opacity-100 text-d-on-surface-12' : 'opacity-50 text-l-on-surface-1'}`}>
               Dark
               </p>
-              {/* <FaToggleOn  className='text-white-1 opacity-50' /> */}
+              {/* <FaToggleOn  className='text-l-on-s dark:text-d-on-surface-high opacity-50' /> */}
               </span>
               
           </div>

@@ -24,14 +24,14 @@ function About({activeTab}: {activeTab: string}) {
   const [selectbox, setSelectbox] = useState(false)
 
   return (
-    <div className={`article about ${activeTab === 'About' ? 'active' : ''}`}>
+    <div className={`article dark:bg-d-surface-2 bg-l-surface-2 border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 about ${activeTab === 'About' ? 'active' : ''} `}>
          <header>
-          <h2 className="h2 article-title">About me</h2>
+          <h2 className="h2 text-l-on-surface-11 dark:text-d-on-surface-11 article-title after:bg-primary">About me</h2>
         </header>
 
         {/* About Me Text */}
 
-        <section className="about-text">
+        <section className="about-text text-l-on-surface-11  dark:text-d-on-surface-11">
           <p>
           Hi there, I'm Henok Belachew, currently in my final year pursuing Computer Engineering at Addis Ababa Science and Technology University (AASTU). However, my passion for creating intuitive user experiences and proficiency in UI design and full-stack development stems from self-directed learning and practical experience.
           </p>
@@ -50,7 +50,7 @@ function About({activeTab}: {activeTab: string}) {
 
         <section className="service">
 
-          <h3 className="h3 service-title">My services</h3>
+          <h3 className="h3 service-title font-[400] text-l-on-surface-11 dark:text-d-on-surface-11">My services</h3>
 
           <ul className="service-list">
 
@@ -77,7 +77,7 @@ function About({activeTab}: {activeTab: string}) {
         
         <section className="professional-skills">
 
-          <h3 className="h3 professional-skills-title ">Professional Skillsets</h3>
+          <h3 className="h3 professional-skills-title font-[400] text-l-on-surface-11 dark:text-d-on-surface-11">Professional Skillsets</h3>
 
           {/* Filter */}
           <ul className="filter-list ">
@@ -157,19 +157,19 @@ function About({activeTab}: {activeTab: string}) {
 
            { filter === 'All' || filter === '' ? skillsetImages.all.map((img) => (
 
-                <img className="skillbox h-[65px] 4-md:h-[80px]"  src={img}></img>
+                <img className="skillbox border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 h-[65px] 4-md:h-[80px]"  src={img}></img>
                 )) : ""
            }  
 
            { filter === 'UI/UX' && skillsetImages.ui_ux_design.map((img) => (
 
-                <img className="skillbox h-[65px] 4-md:h-[80px]"  src={img}></img>
+                <img className="skillbox border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 h-[65px] 4-md:h-[80px]"  src={img}></img>
                 ))
            }  
 
            { filter === 'Web' && skillsetImages.web_development.map((img) => (
 
-                <img className="skillbox h-[60px] 4-md:h-[80px]"  src={img}></img>
+                <img className="skillbox border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 h-[60px] 4-md:h-[80px]"  src={img}></img>
                 ))
            }      
 
@@ -188,7 +188,7 @@ function About({activeTab}: {activeTab: string}) {
         
         <section className="professional-skills">
 
-          <h3 className="h3 professional-skills-title ">Tools I Use</h3>
+          <h3 className="h3 professional-skills-title font-[400] text-l-on-surface-11 dark:text-d-on-surface-11">Tools I Use</h3>
 
          
 
@@ -198,7 +198,7 @@ function About({activeTab}: {activeTab: string}) {
            {
             skillsetImages.tools.map((img) => (
 
-                <img className="skillbox h-[65px] 4-md:h-[80px]"  src={img}></img>
+                <img className="skillbox border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 h-[65px] 4-md:h-[80px]"  src={img}></img>
             ))
            }
 

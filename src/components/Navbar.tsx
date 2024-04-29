@@ -25,7 +25,7 @@ function Navbar({activeTab, setActiveTab}: {activeTab: string, setActiveTab: Fun
   }
 
   return (
-    <div className="navbar">
+    <div className="navbar border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 bg-gradient-to-br to-100% from-0% dark:from-[#002744] to-transparent from-[#0087e831] ">
 
         <ul className="navbar-list">
 

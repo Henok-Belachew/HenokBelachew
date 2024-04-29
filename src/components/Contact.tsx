@@ -9,9 +9,9 @@ function Contact({activeTab}: {activeTab: string}) {
 }, []);
 
     return (
-      <div className={`article about ${activeTab === 'Contact' ? 'active' : ''}`}>
+      <div className={`article about dark:bg-d-surface-2 bg-l-surface-2 border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 ${activeTab === 'Contact' ? 'active' : ''}`}>
           <header>
-            <h2 className="h2 article-title">Contact</h2>
+            <h2 className="h2 text-l-on-surface-11 dark:text-d-on-surface-11 article-title">Contact</h2>
           </header>
 
           <section className="mapbox" data-mapbox>
