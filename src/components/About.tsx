@@ -24,14 +24,14 @@ function About({activeTab}: {activeTab: string}) {
   const [selectbox, setSelectbox] = useState(false)
 
   return (
-    <div className={`article dark:bg-d-surface-2 bg-l-surface-2 border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 about ${activeTab === 'About' ? 'active' : ''} `}>
+    <div className={`article dark:bg-primary-dark-2 bg-primary-light-2 border-[1px] border-primary-light-5 dark:border-primary-dark-5 about ${activeTab === 'About' ? 'active' : ''} `}>
          <header>
-          <h2 className="h2 text-l-on-surface-11 dark:text-d-on-surface-11 article-title after:bg-primary">About me</h2>
+          <h2 className="h2 text-on-light-surface-11 dark:text-on-dark-surface-11 article-title after:bg-primary after:opacity-35">About me</h2>
         </header>
 
         {/* About Me Text */}
 
-        <section className="about-text text-l-on-surface-11  dark:text-d-on-surface-11">
+        <section className="about-text text-on-light-surface-11  dark:text-on-dark-surface-11">
           <p>
           Hi there, I'm Henok Belachew, currently in my final year pursuing Computer Engineering at Addis Ababa Science and Technology University (AASTU). However, my passion for creating intuitive user experiences and proficiency in UI design and full-stack development stems from self-directed learning and practical experience.
           </p>
@@ -50,7 +50,7 @@ function About({activeTab}: {activeTab: string}) {
 
         <section className="service">
 
-          <h3 className="h3 service-title font-[400] text-l-on-surface-11 dark:text-d-on-surface-11">My services</h3>
+          <h3 className="h3 service-title font-[400] text-on-light-surface-11 dark:text-on-dark-surface-11">My services</h3>
 
           <ul className="service-list">
 
@@ -77,22 +77,22 @@ function About({activeTab}: {activeTab: string}) {
         
         <section className="professional-skills">
 
-          <h3 className="h3 professional-skills-title font-[400] text-l-on-surface-11 dark:text-d-on-surface-11">Professional Skillsets</h3>
+          <h3 className="h3 professional-skills-title font-[400] text-on-light-surface-11 dark:text-on-dark-surface-11">Professional Skillsets</h3>
 
           {/* Filter */}
           <ul className="filter-list ">
 
-            <li className="filter-item">
+            <li className="filter-item text-on-light-surface-10 hover:text-on-light-surface-11 dark:text-on-dark-surface-10 dark:hover:text-on-dark-surface-11">
               <button className={filter === 'All' || filter === '' ? 'active' : ''} onClick={() => setFilter('All')} >All</button>
             </li>
 
-            <li className="filter-item">
+            <li className="filter-item text-on-light-surface-10 hover:text-on-light-surface-11 dark:text-on-dark-surface-10 dark:hover:text-on-dark-surface-11">
               <button className={filter === 'UI/UX' ? 'active' : ''} onClick={() => setFilter('UI/UX')}>UI/UX design</button>
             </li>
 
             
 
-            <li className="filter-item">
+            <li className="filter-item text-on-light-surface-10 hover:text-on-light-surface-11 dark:text-on-dark-surface-10 dark:hover:text-on-dark-surface-11">
               <button className={filter === 'Web' ? 'active' : ''} onClick={() => setFilter('Web')}>Web development</button>
             </li>
 
@@ -100,7 +100,7 @@ function About({activeTab}: {activeTab: string}) {
 
           {/* Filter Select Box */}
 
-          <div className="filter-select-box">
+          <div className="filter-select-box rounded-[14px] border-[1px] border-primary-light-5 dark:border-primary-dark-5">
             
             <div className="flex flex-col gap-2">
 
@@ -108,7 +108,7 @@ function About({activeTab}: {activeTab: string}) {
 
                 {/* <p className="select-value text-white-1 font-[300]">Select category</p> */}
 
-                <button onClick={() => setSelectbox(!selectbox)} className="filter-select">
+                <button  onClick={() => setSelectbox(!selectbox)} className="filter-select text-on-light-surface-11 dark:text-on-dark-surface-11">
 
                   
                   <div className="select-value" >
@@ -132,20 +132,20 @@ function About({activeTab}: {activeTab: string}) {
 
             
 
-            <ul className={`select-list  ${selectbox ? 'active' : ''}`}>
+            <ul className={`select-list border-[1px] border-primary-light-5 dark:border-primary-dark-5 bg-primary-light-4 dark:bg-primary-dark-4 text-on-light-surface-10 ${selectbox ? 'active' : ''}`}>
 
               
 
-              <li className="select-item">
-                <button onClick={() =>{ setFilter('All'); setSelectbox(!selectbox)}} >All</button>
+              <li className="select-item ">
+                <button className="rounded-[8px] hover:bg-primary-light-6 dark:hover:bg-primary-dark-6 dark:hover:text-primary-dark-1 hover:text-primary-light-1 " onClick={() =>{ setFilter('All'); setSelectbox(!selectbox)}} >All</button>
               </li>
 
               <li className="select-item">
-                <button onClick={() => {setFilter('UI/UX'); setSelectbox(!selectbox)}} >UI/UX Design</button>
+                <button className="rounded-[8px] hover:bg-primary-light-6 dark:hover:bg-primary-dark-6 dark:hover:text-primary-dark-1 hover:text-primary-light-1 " onClick={() => {setFilter('UI/UX'); setSelectbox(!selectbox)}} >UI/UX Design</button>
               </li>
 
               <li className="select-item">
-                <button onClick={() => {setFilter('Web'); setSelectbox(!selectbox)}} >Web development</button>
+                <button className="rounded-[8px] hover:bg-primary-light-6 dark:hover:bg-primary-dark-6 dark:hover:text-primary-dark-1 hover:text-primary-light-1 " onClick={() => {setFilter('Web'); setSelectbox(!selectbox)}} >Web development</button>
               </li>
 
             </ul>
@@ -157,19 +157,19 @@ function About({activeTab}: {activeTab: string}) {
 
            { filter === 'All' || filter === '' ? skillsetImages.all.map((img) => (
 
-                <img className="skillbox border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 h-[65px] 4-md:h-[80px]"  src={img}></img>
+                <img className="skillbox border-[1px] border-primary-light-5 dark:border-primary-dark-5 h-[65px] 4-md:h-[80px]"  src={img}></img>
                 )) : ""
            }  
 
            { filter === 'UI/UX' && skillsetImages.ui_ux_design.map((img) => (
 
-                <img className="skillbox border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 h-[65px] 4-md:h-[80px]"  src={img}></img>
+                <img className="skillbox border-[1px] border-primary-light-5 dark:border-primary-dark-5 h-[65px] 4-md:h-[80px]"  src={img}></img>
                 ))
            }  
 
            { filter === 'Web' && skillsetImages.web_development.map((img) => (
 
-                <img className="skillbox border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 h-[60px] 4-md:h-[80px]"  src={img}></img>
+                <img className="skillbox border-[1px] border-primary-light-5 dark:border-primary-dark-5 h-[60px] 4-md:h-[80px]"  src={img}></img>
                 ))
            }      
 
@@ -188,7 +188,7 @@ function About({activeTab}: {activeTab: string}) {
         
         <section className="professional-skills">
 
-          <h3 className="h3 professional-skills-title font-[400] text-l-on-surface-11 dark:text-d-on-surface-11">Tools I Use</h3>
+          <h3 className="h3 professional-skills-title font-[400] text-on-light-surface-11 dark:text-on-dark-surface-11">Tools I Use</h3>
 
          
 
@@ -198,7 +198,7 @@ function About({activeTab}: {activeTab: string}) {
            {
             skillsetImages.tools.map((img) => (
 
-                <img className="skillbox border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 h-[65px] 4-md:h-[80px]"  src={img}></img>
+                <img className="skillbox border-[1px] border-primary-light-5 dark:border-primary-dark-5 h-[65px] 4-md:h-[80px]"  src={img}></img>
             ))
            }
 

@@ -9,9 +9,9 @@ function Contact({activeTab}: {activeTab: string}) {
 }, []);
 
     return (
-      <div className={`article about dark:bg-d-surface-2 bg-l-surface-2 border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 ${activeTab === 'Contact' ? 'active' : ''}`}>
+      <div className={`article about dark:bg-primary-dark-2 bg-primary-light-2 border-[1px] border-primary-light-5 dark:border-primary-dark-5 ${activeTab === 'Contact' ? 'active' : ''}`}>
           <header>
-            <h2 className="h2 text-l-on-surface-11 dark:text-d-on-surface-11 article-title">Contact</h2>
+            <h2 className="h2 text-on-light-surface-11 dark:text-on-dark-surface-11 article-title after:bg-primary after:opacity-35">Contact</h2>
           </header>
 
           <section className="mapbox" data-mapbox>
@@ -25,19 +25,19 @@ function Contact({activeTab}: {activeTab: string}) {
 
         <div className="contact-form">
 
-          <h3 className="h3 form-title">Contact Form</h3>
+          <h3 className="h3 form-title text-on-light-surface-11 dark:text-on-dark-surface-11">Contact Form</h3>
 
-          <div className="form" data-form>
+          <div className="form" >
 
             <div className="input-wrapper">
-              <input type="text" name="fullname" className="form-input" placeholder="Full name" required data-form-input />
+              <input type="text" name="fullname" className="form-input border-[1px] border-primary-light-5 dark:border-primary-dark-5" placeholder="Full name"  />
 
-              <input type="email" name="email" className="form-input" placeholder="Email address" required data-form-input />
+              <input type="email" name="email" className="form-input border-[1px] border-primary-light-5 dark:border-primary-dark-5" placeholder="Email address"  />
             </div>
 
-            <textarea name="message" className="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea name="message" className="form-input border-[1px] border-primary-light-5 dark:border-primary-dark-5" placeholder="Your Message" ></textarea>
 
-            <button className="form-btn" type="submit" disabled data-form-btn>
+            <button className="form-btn bg-gradient-to-br to-100% from-0% dark:from-[#002744]   from-[#0087e870] text-on-light-surface-11 dark:text-on-dark-surface-11 to-transparent hover:text-primary" type="submit" >
               <IoIosSend />
               <span>Send Message</span>
             </button>

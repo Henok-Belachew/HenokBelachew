@@ -21,7 +21,7 @@ function SocialMedia() {
     <div className="social-list">
     {socialMedia.map((item) => (
         <li className="social-item">
-            <a href={item.link} className="social-link">
+            <a href={item.link} className="social-link text-on-light-surface-9 dark:text-on-light-surface-9  hover:text-primary ">
             {item.icon}
             </a>
         </li>

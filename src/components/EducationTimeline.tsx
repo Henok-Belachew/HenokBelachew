@@ -4,11 +4,11 @@ function EducationTimeline({institution, description, date}: {institution: strin
   return (
     <div className="timeline-item">
 
-              <h4 className="h5 subtext -mt-1">{institution}</h4>
-              <p className="timeline-text text-l-on-surface-11  dark:text-d-on-surface-11">
+              <h4 className="h5 subtext text-primary-dark-8 dark:text-primary-dark-8  -mt-1">{institution}</h4>
+              <p className="timeline-text text-on-light-surface-11  dark:text-on-dark-surface-11">
                 {description}
               </p>
-              <span>{date}</span>
+              <span className="text-on-light-surface-8 dark:text-on-dark-surface-8">{date}</span>
 
               
 

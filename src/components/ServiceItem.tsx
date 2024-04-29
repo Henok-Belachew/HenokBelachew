@@ -16,8 +16,8 @@ const ServiceItem = ({ title, icon, description }: ServiceItemProps) => {
           
         </div>
         <div className="service-content-box">
-          <h4 className="h4 font-500 service-item-title text-l-on-surface-12 dark:text-d-on-surface-12">{title}</h4>
-          <p className="service-item-text text-l-on-surface-11  dark:text-d-on-surface-11">{description}</p>
+          <h4 className="h4 font-500 service-item-title text-primary ">{title}</h4>
+          <p className="service-item-text text-on-light-surface-11  dark:text-on-dark-surface-11">{description}</p>
         </div>
       </li>
     );

@@ -7,9 +7,9 @@ function Portfolio({activeTab}: {activeTab: string}) {
   
 }, []);
     return (
-      <div className={`article about ${activeTab === 'Portfolio' ? 'active' : ''}`}>
+      <div className={`article dark:bg-primary-dark-2 bg-primary-light-2 border-[1px] border-primary-light-5 dark:border-primary-dark-5  about ${activeTab === 'Portfolio' ? 'active' : ''}`}>
           <header>
-            <h2 className="h2 text-l-on-surface-11 dark:text-d-on-surface-11 article-title">Portfolio</h2>
+            <h2 className="h2 text-on-light-surface-11 dark:text-on-dark-surface-11 article-title after:bg-primary after:opacity-35">Portfolio</h2>
           </header>
 
           <div className="projects">

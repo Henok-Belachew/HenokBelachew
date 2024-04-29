@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import CursorDark from "../src/assets/images/cursor.svg"
 
 import Sidebar from "./components/Sidebar"
 import Navbar from "./components/Navbar"

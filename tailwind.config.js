@@ -15,6 +15,13 @@ export default {
     },
     
     extend: {
+      saturate: {
+        '200': '2', 
+      },
+      
+      hueRotate: {
+        '180': '180deg', 
+      },
       gradient: {
         'gradient-1': 'linear-gradient(to bottom right, #002744 0%, #09121B 50%)',
       },
@@ -41,92 +48,72 @@ export default {
         '500': 500,
         '600': 600,
       },
-      backgroundImage: {
-        // Custom gradient
-
-
-        // gradient jet
-        'd-gradient-1': `linear-gradient(
-          to bottom right, 
-          #172537 2%,   // Corrected the syntax here
-          hsla(240, 2%, 11%, 0) 100%
-        ), #141d2b`,
-        
-        // gradient yellow 1
-        'd-gradient-2': `linear-gradient(
-          to bottom right, 
-          #077edf,    // Note the comma here separating the color stops
-          #ffc06100 50%
-        )`,
-
-        // gradient yellow 2
-        'd-gradient-3': `linear-gradient(  
-          135deg, 
-          #005296 0%, 
-          #ffbb5c00 59.86%
-        ), #202022`
-      },
+     
       colors: {
-        // ----------- DARK MODE ----------- //
-        // - Solid color - Accessible texts - //
-        'd-on-surface-12': "#EEEEF0",
-        'd-on-surface-11': "#B2B3BD",
-        'd-on-surface-10': "#797B86",
 
-        // ------ Border and Separators -----//
-        'd-on-surface-9': "#0087E8",
-        'd-on-surface-8': "#276FB2",
-        'd-on-surface-7': "#215D95",
-        'd-on-surface-6': "#164D80",
-        'd-on-surface-5': "#0C2844",
-
-
-        // ----------- LIGHT MODE ----------- //
-        // - Solid color - Accessible texts - //
-
-        'l-on-surface-12': "#1E1F24",
-        'l-on-surface-11': "#62636C",
-        'l-on-surface-10': "#80828D",
-
-        // ------ Border and Separators -----//
-        'l-on-surface-9': "#8B8D98",
-        'l-on-surface-8': "#B9BBC6",
-        'l-on-surface-7': "#CDCED7",
-        'l-on-surface-6': "#D8D9E0",
-        'l-on-surface-5': "#C7E3FF",
-
-        'primary': "#0087E8",
-
-
-
-
-        'd-surface-1': "#09121B",  //smoky-black
-        'd-surface-2': "#0F1924",
+        "primary": "#0087e8",
         
-        'd-surface-3': "#0C2942",
-        'd-surface-4': "#00345B",
-        'd-surface-5': "#07406D",
-
-
-        'l-surface-1': "#FBFDFF",
-        'l-surface-2': "#F4FAFF",
-        'l-surface-3': "#E8F3FF",
-  
-
-
-        'jet': 'var(--jet)',
-        'onyx': 'var(--onyx)',
-        'eerie-black-1': 'var(--eerie-black-1)',
-        'eerie-black-2': 'var(--eerie-black-2)',
-        'smoky-black': 'var(--smoky-black)',
-        'white-1': 'var(--white-1)',
-        'white-2': 'var(--white-2)',
-        'orange-yellow-crayola': 'var(--orange-yellow-crayola)',
-        'vegas-gold': 'var(--vegas-gold)',
-        'light-gray': 'var(--light-gray)',
-        'light-gray-70': 'var(--light-gray-70)',
-        'bittersweet-shimmer': 'var(--bittersweet-shimmer)',
-        // 'gradient-1': 'var(--border-gradient-onyx)'
+        "on-light-surface": {
+          "1": "#fcfcfd",
+          "2": "#f9f9fb",
+          "3": "#eff0f3",
+          "4": "#e7e8ec",
+          "5": "#e0e1e6",
+          "6": "#d8d9e0",
+          "7": "#cdced7",
+          "8": "#b9bbc6",
+          "9": "#8b8d98",
+          "10": "#80828d",
+          "11": "#62636c",
+          "12": "#1e1f24",
+        },
+        
+        "on-dark-surface": {
+          "1": "#111113",
+          "2": "#19191b",
+          "3": "#222325",
+          "4": "#292a2e",
+          "5": "#303136",
+          "6": "#393a40",
+          "7": "#46484f",
+          "8": "#5f606a",
+          "9": "#6c6e79",
+          "10": "#797b86",
+          "11": "#b2b3bd",
+          "12": "#eeeef0"
+        },  
+        
+        "primary-light": {
+          "1": "#fbfdff",
+          "2": "#f5faff",
+          "3": "#e9f3fe",
+          "4": "#d9edff",
+          "5": "#c7e3ff",
+          "6": "#b3d6fc",
+          "7": "#98c5f5",
+          "8": "#6faeef",
+          "9": "#0087e8",
+          "10": "#0079dc",
+          "11": "#0075d4",
+          "12": "#003560",
+        },
+        
+        "primary-dark": {
+          "1": "#09121b",
+          "2": "#0f1924",
+          "3": "#0c2844",
+          "4": "#01335d",
+          "5": "#08406f",
+          "6": "#164d80",
+          "7": "#215d95",
+          "8": "#276fb2",
+          "9": "#0087e8",
+          "10": "#007ada",
+          "11": "#78b9fd",
+          "12": "#cce4fd",
+        },
+        
+        
       },
       boxShadow: {
         'shadow-1': '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)',

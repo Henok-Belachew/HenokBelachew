@@ -8,9 +8,9 @@ function Certificates({activeTab}: {activeTab: string}) {
   
 }, []);
     return (
-      <div className={`article dark:bg-d-surface-2 bg-l-surface-2 border-[1px] border-l-on-surface-5 dark:border-d-on-surface-5 about ${activeTab === 'Certificates' ? 'active' : ''}`}>
+      <div className={`article dark:bg-primary-dark-2 bg-primary-light-2 border-[1px] border-primary-light-5 dark:border-primary-dark-5 about ${activeTab === 'Certificates' ? 'active' : ''}`}>
           <header>
-            <h2 className="h2 text-l-on-surface-11 dark:text-d-on-surface-11 article-title">Certificates</h2>
+            <h2 className="h2 text-on-light-surface-11 dark:text-on-dark-surface-11 article-title after:bg-primary after:opacity-35">Certificates</h2>
           </header>
 
 
@@ -19,22 +19,22 @@ function Certificates({activeTab}: {activeTab: string}) {
             {
               CertificatesData.map((data, ) => (
                 <>
-                <div className="w-[250px] mx-auto lg:mx-0 text-white-2">
+                <div className="w-[250px] mx-auto lg:mx-0 ">
                   <img className="w-[250px] bg-cover h-[145px] " src={data.img} alt="" />
 
                   <div className="mt-3 flex flex-col gap-2">
 
                     <div className="flex flex-col gap-1">
-                      <h1>{data.name}</h1>
-                      <p className="flex font-[300] text-white-2 opacity-80">{data.issuingOrg}</p>
+                      <h1 className="text-on-light-surface-11 dark:text-on-dark-surface-11">{data.name}</h1>
+                      <p className="flex font-[300] text-on-light-surface-11  dark:text-on-dark-surface-11 opacity-80">{data.issuingOrg}</p>
                     </div>
                     
-                    <div className="flex font-[200] text-white-2 opacity-80 justify-between">
+                    <div className="flex font-[200] text-on-light-surface-11  dark:text-on-dark-surface-11 opacity-80  justify-between">
                     
                     
                     <p className="">Issued {data.dateIssue}</p>
 
-                    <span onClick={() => window.open(data.link, '_blank')} className="flex gap-2 items-center opacity-70 hover:opacity-100 hover:text-orange-yellow-crayola justify-center cursor-pointer">
+                    <span onClick={() => window.open(data.link, '_blank')} className="flex gap-2 items-center hover:text-white  justify-center cursor-pointer">
                         
                         <span >Verify</span>
 

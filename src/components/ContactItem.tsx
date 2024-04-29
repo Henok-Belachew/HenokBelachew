@@ -17,16 +17,16 @@ const ContactItem: React.FC<ContactItemProps> = ({ icon, title, content, link })
       </div>
       <div className="contact-info">
         <div className="flex justify-between">
-            <p className="contact-title text-l-on-surface-10 dark:text-d-on-surface-10">{title}</p>
+            <p className="contact-title text-on-light-surface-9 dark:text-on-dark-surface-9">{title}</p>
 
-            {link && <IoCopyOutline className="text-white-1 opacity-50" />}
+            {link && <IoCopyOutline className="text-on-light-surface-9 dark:text-on-dark-surface-9 " />}
             
         </div>
         
         {link ? (
-          <a href={link} className="contact-link text-l-on-surface-1 dark:text-d-on-surface-12">{content}</a>
+          <a href={link} className="contact-link text-on-light-surface-11 dark:text-on-dark-surface-11">{content}</a>
         ) : (
-          <div className="contact-link text-l-on-surface-12 dark:text-d-on-surface-12">{content}</div>
+          <div className="contact-link text-on-light-surface-11 dark:text-on-dark-surface-11">{content}</div>
         )}
       </div>
     </li>
