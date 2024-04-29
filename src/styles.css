@@ -1908,7 +1908,7 @@
     .sidebar {
       position: sticky;
     top: 60px;
-    min-height: 745px;
+    min-height: 755px;
     /* height: 100%; */
     margin-bottom: 0;
     padding-top: 40px;

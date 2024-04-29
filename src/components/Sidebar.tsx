@@ -60,6 +60,19 @@ function Sidebar({darkmode, setDarkmode}: {darkmode: boolean, setDarkmode: React
   return (
     <aside className={`sidebar  ${isExpanded ? 'active' : ''}`} >
       <div className="sidebar-info">
+      <span onClick={()=>{setDarkmode((prev)=>!prev)}} className='cursor-pointer hidden xl:flex justify-between items-center gap-2'>
+              <p className={`text-[14px] text-white-2 ${darkmode ? 'opacity-50 text-white-1' : 'opacity-100 text-white-2'}`}>
+              Light 
+              </p>
+
+              {darkmode == false  && <FaToggleOn   className='text-white-1 opacity-100 rotate-180 text-[18px]' />}
+              
+              {darkmode == true && <FaToggleOn   className='text-white-1 opacity-100 text-[18px]' />}
+              <p className={`text-[14px] text-white-2 ${darkmode ? 'opacity-100 text-white-1' : 'opacity-50 text-white-2'}`}>
+              Dark
+              </p>
+              {/* <FaToggleOn  className='text-white-1 opacity-50' /> */}
+              </span>
         <figure className="avatar-box">
           <img src={myavator} alt="Richard Hanrick" width="80" />
         </figure>
@@ -110,7 +123,7 @@ function Sidebar({darkmode, setDarkmode}: {darkmode: boolean, setDarkmode: React
 
 
               {/* Dark/Light Toggle Button */}
-              <span onClick={()=>{setDarkmode((prev)=>!prev)}} className='cursor-pointer flex justify-between items-center gap-2'>
+              <span onClick={()=>{setDarkmode((prev)=>!prev)}} className='xl:hidden cursor-pointer flex justify-between items-center gap-2'>
               <p className={`text-[14px] text-white-2 ${darkmode ? 'opacity-50 text-white-1' : 'opacity-100 text-white-2'}`}>
               Light 
               </p>
