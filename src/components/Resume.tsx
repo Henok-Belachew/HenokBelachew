@@ -36,7 +36,7 @@ function Resume({activeTab}: {activeTab: string}) {
   
 }, []);
 
-const resume:string = "https://raw.githubusercontent.com/Henok-Belachew/Henok-Belachew/master/MY%20CV.pdf"
+const resume:string = "https://raw.githubusercontent.com/Henok-Belachew/HenokBelachew/b4a4324b5a0e53f7055f7a38886dbcecd4710654/My%20CV.pdf?token=AYQJZWDYIFH4U3DXOCWBRA3GQR2FS"
   return (
     <div className={`article dark:bg-primary-dark-2 bg-primary-light-2 border-[1px] border-primary-light-5 dark:border-primary-dark-5 about after:bg-primary after:opacity-35 ${activeTab === 'Resume' ? 'active' : ''}`}>
         <header>
