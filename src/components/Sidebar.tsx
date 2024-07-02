@@ -62,7 +62,8 @@ function Sidebar({darkmode, setDarkmode}: {darkmode: boolean, setDarkmode: React
       <div className="sidebar-info">
 
         {/* Upper Dark/Light Button */}
-      <span onClick={()=>{setDarkmode((prev)=>!prev)}} className='cursor-pointer hidden xl:flex justify-between items-center gap-2'>
+        {/* onClick={()=>{setDarkmode((prev)=>!prev)}} */}
+      <span  className='cursor-pointer hidden  justify-between items-center gap-2'>
               <p className={`text-[14px]    ${darkmode ? 'opacity-50  dark:text-on-dark-surface-11' : 'opacity-100 text-on-light-surface-11'}`}>
               Light 
               </p>
@@ -129,7 +130,7 @@ function Sidebar({darkmode, setDarkmode}: {darkmode: boolean, setDarkmode: React
 
 
               {/* Dark/Light Toggle Button */}
-              <span onClick={()=>{setDarkmode((prev)=>!prev)}} className='cursor-pointer flex xl:hidden justify-between items-center gap-2'>
+              <span onClick={()=>{setDarkmode((prev)=>!prev)}} className='cursor-pointer hidden justify-between items-center gap-2'>
               <p className={`text-[14px]    ${darkmode ? 'opacity-50  dark:text-on-dark-surface-11' : 'opacity-100 text-on-light-surface-11'}`}>
               Light 
               </p>

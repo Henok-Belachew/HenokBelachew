@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import CursorDark from "../src/assets/images/cursor.svg"
+
 
 import Sidebar from "./components/Sidebar"
 import Navbar from "./components/Navbar"
@@ -15,7 +15,7 @@ import Contact from "./components/Contact"
 function App() {
 
   const [activeTab, setActiveTab] = useState('About');	
-  const [darkmode, setDarkmode] = useState(false);
+  const [darkmode, setDarkmode] = useState(true);
 
   useEffect(() => {
     darkmode ? document.body.classList.add('dark') : document.body.classList.remove('dark');

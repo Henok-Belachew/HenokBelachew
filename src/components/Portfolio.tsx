@@ -13,63 +13,7 @@ function Portfolio({activeTab}: {activeTab: string}) {
           </header>
 
           <div className="projects">
-              
-              {/* Filtering Elemnts */}
-              <ul className="filter-list">
-
-                  <li className="filter-item">
-                    <button className="active" >All</button>
-                  </li>
-
-                  <li className="filter-item">
-                    <button >Website design</button>
-                  </li>
-
-                  <li className="filter-item">
-                    <button >Mobile App Design</button>
-                  </li>
-
-                  <li className="filter-item">
-                    <button >Web development</button>
-                  </li>
-
-              </ul>
-
-              <div className="filter-select-box">
-
-                  <button className="filter-select" data-select>
-
-                      <div className="select-value" data-selecct-value>Select category</div>
-
-                      <div className="select-icon">
-                        <IoIosArrowDown />
-                      </div>
-
-                  </button>
-
-                  <ul className="select-list">
-
-                    <li className="select-item">
-                      <button data-select-item>All</button>
-                    </li>
-
-                    <li className="select-item">
-                      <button data-select-item>Web design</button>
-                    </li>
-
-                    <li className="select-item">
-                      <button data-select-item>Applications</button>
-                    </li>
-
-                    <li className="select-item">
-                      <button data-select-item>Web development</button>
-                    </li>
-
-                  </ul>
-
-              </div>
-
-              {/* ----- Filtering Elements End ----- */}
+            <p className="text-[#b8b8b8] text-center lg:mt-28 mt-12 w-4/5 mx-auto">This section is still under development. Please visit my <a className="inline hover:text-primary-dark-9 text-primary-dark-9" href="https://github.com/Henok-Belachew">GitHub</a> and <a className="inline hover:text-primary-dark-9 text-primary-dark-9" href="https://www.behance.net/henokbelachew">Behance</a> to see my work in the meantime.  I appreciate your understanding! </p>
 
 
 
