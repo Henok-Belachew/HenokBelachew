@@ -33,15 +33,19 @@ function About({activeTab}: {activeTab: string}) {
 
         <section className="about-text text-on-light-surface-11  dark:text-on-dark-surface-11">
           <p>
-          Hi there, I'm Henok Belachew, currently in my final year pursuing Computer Engineering at Addis Ababa Science and Technology University (AASTU). However, my passion for creating intuitive user experiences and proficiency in UI design and full-stack development stems from self-directed learning and practical experience.
+          I’m Henok Belachew, a UI/UX Designer with a developer’s mindset—bringing together visual clarity, usability, and technical feasibility to craft digital experiences that truly connect with users.
           </p>
 
           <p>
-          My primary programming language is JavaScript, allowing me to seamlessly merge design finesse with technical expertise. I specialize in frontend technologies such as React, Tailwind CSS, and various frontend libraries for crafting engaging user interfaces. In backend development, I leverage Node.js to ensure secure and efficient functionality. Proficient in database management, I work with tools like MongoDB or SQL for streamlined data handling.
+          With 4+ years of hands-on experience in designing functional, user-centered interfaces, I specialize in transforming complex ideas into clean, intuitive, and scalable designs. From wireframes to high-fidelity prototypes, I use tools like Figma to create thoughtful design systems that align with both user needs and business goals.
           </p>
 
           <p>
-          My journey revolves around self-driven learning and hands-on experience, focusing on integrating captivating design principles with robust technical solutions to deliver digital products that are both engaging and pragmatic.
+          What drives me is the challenge of solving real problems through design. I approach every project with a strong focus on process—research, user flow, accessibility, and interaction—to ensure the end result is not just beautiful, but purposeful.
+          </p>
+
+          <p>
+          While my core strength lies in design, I also bring frontend development experience using React, Tailwind CSS, and JavaScript, which allows me to collaborate more effectively with development teams and design realistic, implementation-ready solutions.
           </p>
         </section>
 
